@@ -2,10 +2,15 @@
 @use './partials/mixin' as *;
 @use './partials/variables' as *;
 
+li{
+    padding-top: 2rem;
+}
+
 .hidden {  // deal with the header in mobile and tablet modes
     display: none;
     @include tablet-et-desk {
         display: flex;
+        padding-top: 1rem;
     }
 }
 .filter-green{
@@ -38,7 +43,7 @@
         align-items: center;
         max-width: 90%;
         justify-content:center;
-        padding-top: $padding-24;
+        // padding-top: ;
         
         @include tablet-et-desk {
             display: none;
@@ -48,12 +53,12 @@
     &__tabs {
         display: flex;
         flex-direction: row; 
-        justify-content:space-between;
+        justify-content:space-around;
         list-style-type: none;
         padding: 0 $padding-16;        
 
         @include tablet-et-desk {
-            width: 40%;
+            width: 70%;
         }
     }
 }
@@ -130,4 +135,12 @@
     &__copyright {
         padding: 2rem 0 2rem 0;
     }
+}
+
+.inactiveA, .active{
+    color: #54117f;
+    font-size: 1rem;
+    font-family: "Avenir", Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    // margin-top: 2rem;
 }

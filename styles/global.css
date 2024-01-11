@@ -9,7 +9,7 @@ h2,
 p,
 body {
   margin: 0;
-  font-family: "Avenir";
+  font-family: "Avenir", Arial, Helvetica, sans-serif;
 }
 
 /* Set Breakpoint width */
@@ -18,12 +18,17 @@ body {
 /* Set padding */
 /* Set Color */
 /* Text styles */
+li {
+  padding-top: 2rem;
+}
+
 .hidden {
   display: none;
 }
 @media screen and (min-width: 768px) {
   .hidden {
     display: flex;
+    padding-top: 1rem;
   }
 }
 
@@ -32,7 +37,7 @@ body {
 }
 
 .header {
-  background-color: #ffdf01;
+  background-color: #ffee76;
   position: fixed;
   top: 0;
   left: 0;
@@ -54,7 +59,6 @@ body {
   align-items: center;
   max-width: 90%;
   justify-content: center;
-  padding-top: 24px;
 }
 @media screen and (min-width: 768px) {
   .header__img {
@@ -64,13 +68,13 @@ body {
 .header__tabs {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   list-style-type: none;
   padding: 0 16px;
 }
 @media screen and (min-width: 768px) {
   .header__tabs {
-    width: 40%;
+    width: 70%;
   }
 }
 
@@ -150,4 +154,11 @@ body {
 }
 .footer__copyright {
   padding: 2rem 0 2rem 0;
+}
+
+.inactiveA, .active {
+  color: #54117f;
+  font-size: 1rem;
+  font-family: "Avenir", Arial, Helvetica, sans-serif;
+  font-weight: 600;
 }/*# sourceMappingURL=global.css.map */

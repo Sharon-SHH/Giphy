@@ -9,7 +9,7 @@ h2,
 p,
 body {
   margin: 0;
-  font-family: "Avenir";
+  font-family: "Avenir", Arial, Helvetica, sans-serif;
 }
 
 /* Set Breakpoint width */
@@ -18,8 +18,12 @@ body {
 /* Set padding */
 /* Set Color */
 /* Text styles */
+.logo {
+  width: 4rem;
+}
+
 .url {
-  background-image: url("../assets/images/hero-shows.jpg");
+  background-image: url("../assets/images/colorful.jpg");
 }
 
 .hero {
@@ -51,16 +55,18 @@ body {
   padding-left: 1rem;
   padding-top: 4rem;
 }
-.hero__infoWrapper h2 {
-  font-size: 14px;
-  line-height: 22px;
+.hero__infoWrapper h1 {
+  font-size: 24px;
+  line-height: 32px;
   font-family: "Avenir", Arial, Helvetica, sans-serif;
   color: white;
+  color: white;
+  padding-bottom: 2rem;
 }
 @media screen and (min-width: 768px) {
-  .hero__infoWrapper h2 {
-    font-size: 24px;
-    line-height: 32px;
+  .hero__infoWrapper h1 {
+    font-size: 60px;
+    line-height: 68px;
   }
 }
 .hero__wrapper {
@@ -78,17 +84,17 @@ body {
     align-items: center;
   }
 }
-.hero__wrapper h1 {
-  font-size: 24px;
-  line-height: 32px;
+.hero__wrapper h2 {
+  font-size: 14px;
+  line-height: 22px;
   font-family: "Avenir", Arial, Helvetica, sans-serif;
   color: white;
-  max-width: 60%;
+  max-width: 80%;
 }
 @media screen and (min-width: 768px) {
-  .hero__wrapper h1 {
-    font-size: 60px;
-    line-height: 68px;
+  .hero__wrapper h2 {
+    font-size: 24px;
+    line-height: 32px;
   }
 }
 
@@ -97,7 +103,4 @@ body {
   max-width: 1140px;
   margin: auto;
   padding: 1rem 16px 2rem 16px;
-}
-source {
-  type: "video/mp4";
 }/*# sourceMappingURL=sytle.css.map */

@@ -22,15 +22,22 @@ $lh-18: 18px;
 $padding-24: 24px;
 $padding-16: 16px;
 
-$footer-item-len: 16rem; // width in tablet and desktop mode
-$footer-item-len-m: 8rem; 
+$footer-item-len: 16rem;
+$footer-item-len-m: 8rem;
 
 /* Set Color */
-$header-color:#ffdf01; //#ffffc5
+
+$header-color: #ffdf01;
+
+$header-color:#ffee76; 
+
 $footer-color: #ffffc5;
 $footer-backgroundcolor: #323232;
-$main-color: #AFAFAF;
+$main-color: #afafaf;
 $active-color: white;
 
-$url-show: '../assets/images/hero-shows.jpg';
+
+$url-show: "../assets/images/hero-shows.jpg";
+
+$url-show: '../assets/images/colorful.jpg';
 
