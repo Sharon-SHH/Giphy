@@ -1,74 +1,68 @@
-@use './partials/resets' as *;
-@use './partials/mixin' as *;
-@use './partials/variables' as *;
+@use "./partials/resets" as *;
+@use "./partials/mixin" as *;
+@use "./partials/variables" as *;
 
 .url {
-    background-image: url($url-show);
+  background-image: url($url-show);
 }
 .hero {
-    margin-top: 5rem;
+  margin-top: 5rem;
+
+  @include tablet-et-desk {
+    margin-top: 3.5rem;
+  }
+
+  &__info {
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
 
     @include tablet-et-desk {
-        margin-top: 3.5rem;
+      height: 65vh;
     }
-    
-    &__info {
-        width: 100%;
-        background-size: cover;
-        background-position: center;
-        height: 50vh;
+  }
+  &__infoWrapper {
+    max-width: $wrapper-max-width;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding-left: 1rem;
+    padding-top: 4rem;
 
-        @include tablet-et-desk {
-            height: 65vh;
-        }
-        
+    h2 {
+      @include sub-header;
+      color: $active-color;
     }
-    &__infoWrapper {
-        max-width: $wrapper-max-width;
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: flex-start;
-        padding-left: 1rem;
-        padding-top: 4rem;
+  }
 
-        h2 {
-            @include sub-header;
-            color: $active-color;
-        }
+  &__wrapper {
+    width: 100%;
+    max-width: $wrapper-max-width;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    @include desktop {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
     }
-
-
-    &__wrapper {
-        width: 100%;
-        max-width: $wrapper-max-width;
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content:space-around;
-
-        @include desktop {
-            flex-direction: row;
-            justify-content: space-between;
-            align-items:center;
-        }
-        h1 {
-            @include page-header;
-            max-width: 60%;
-        }
+    h1 {
+      @include page-header;
+      max-width: 80%;
     }
+  }
 }
 
 .gifs {
-    &__wrapper {
-        width: 100%;
-        max-width: $wrapper-max-width;
-        margin: auto;
-        padding: 1rem $padding-16 2rem $padding-16;
-    }
-
-    &__details {
-       
-    }
+  &__wrapper {
+    width: 100%;
+    max-width: $wrapper-max-width;
+    margin: auto;
+    padding: 1rem $padding-16 2rem $padding-16;
+  }
 }

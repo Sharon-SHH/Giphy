@@ -54,7 +54,7 @@ body {
 .hero__infoWrapper h2 {
   font-size: 14px;
   line-height: 22px;
-  font-family: "Avenir", Arial, Helvetica, sans-serif;
+  font-family: monospace;
   color: white;
 }
 @media screen and (min-width: 768px) {
@@ -80,14 +80,13 @@ body {
 }
 .hero__wrapper h1 {
   font-size: 24px;
-  line-height: 32px;
-  font-family: "Avenir", Arial, Helvetica, sans-serif;
+  font-family: monospace;
   color: white;
-  max-width: 60%;
+  max-width: 80%;
 }
 @media screen and (min-width: 768px) {
   .hero__wrapper h1 {
-    font-size: 60px;
+    font-size: 14px;
     line-height: 68px;
   }
 }
