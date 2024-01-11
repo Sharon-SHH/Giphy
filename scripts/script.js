@@ -15,8 +15,9 @@ function addToHTML(gifs) {
   // const img = document.createElement("img");
   // img.src = gifs.images["480w_still"].url;
 
-  const img1 = document.createElement("img");
-  img1.src = gifs.images["downsized"].url;
+  const img = document.createElement("img");
+  img.src = gifs.images["downsized"].url;
+  img.classList.add("gifs__img");
 
   // const mp4 = document.createElement("video");
   // const source = document.createElement("source");
@@ -28,7 +29,7 @@ function addToHTML(gifs) {
   // console.log(mp4);
 
   // root.appendChild(img);
-  root.appendChild(img1);
+  root.appendChild(img);
   // root.appendChild(mp4);
 }
  async function fetchAPI() {
