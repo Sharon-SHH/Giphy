@@ -9,7 +9,7 @@ h2,
 p,
 body {
   margin: 0;
-  font-family: "Avenir";
+  font-family: monospace;
 }
 
 /* Set Breakpoint width */
@@ -56,6 +56,7 @@ body {
   line-height: 22px;
   font-family: monospace;
   color: white;
+  padding-bottom: 2rem;
 }
 @media screen and (min-width: 768px) {
   .hero__infoWrapper h2 {
@@ -80,6 +81,7 @@ body {
 }
 .hero__wrapper h1 {
   font-size: 24px;
+  line-height: 32px;
   font-family: monospace;
   color: white;
   max-width: 80%;
@@ -87,7 +89,7 @@ body {
 @media screen and (min-width: 768px) {
   .hero__wrapper h1 {
     font-size: 14px;
-    line-height: 68px;
+    line-height: normal;
   }
 }
 

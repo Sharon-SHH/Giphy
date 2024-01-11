@@ -15,13 +15,13 @@
 /* Text styles */
 @mixin page-header {
   font-size: $t-24;
-
+  line-height: $lh-32;
   font-family: monospace;
   color: $active-color;
 
   @include tablet-et-desk {
     font-size: $t-14;
-    line-height: $lh-68;
+    line-height: normal;
   }
 }
 
