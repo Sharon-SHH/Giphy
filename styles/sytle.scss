@@ -2,6 +2,10 @@
 @use "./partials/mixin" as *;
 @use "./partials/variables" as *;
 
+.logo{
+    width:4rem;
+}
+
 .url {
   background-image: url($url-show);
 }
@@ -32,8 +36,8 @@
     padding-left: 1rem;
     padding-top: 4rem;
 
-    h2 {
-      @include sub-header;
+    h1 {
+      @include page-header;
       color: $active-color;
       padding-bottom: 2rem;
     }
@@ -52,8 +56,9 @@
       justify-content: space-between;
       align-items: center;
     }
-    h1 {
-      @include page-header;
+    h2 {
+      @include sub-header;
+      color: white;
       max-width: 80%;
     }
   }
