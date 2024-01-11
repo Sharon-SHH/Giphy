@@ -10,32 +10,15 @@ const categoriesURL =
 
 
 function addToHTML(gifs) {
-  // const gifs = gifsList.data[3].gif;
-  // create an image element
-  // const img = document.createElement("img");
-  // img.src = gifs.images["480w_still"].url;
-
   const img = document.createElement("img");
   img.src = gifs.images["downsized"].url;
   img.classList.add("gifs__img");
 
-  // const mp4 = document.createElement("video");
-  // const source = document.createElement("source");
-  // source.src = gifs.images["downsized_small"].mp4;
-  // source.type = "video/mp4";
-  // mp4.autoplay = true;
-  // mp4.appendChild(source);
-  // console.log(source);
-  // console.log(mp4);
-
-  // root.appendChild(img);
   root.appendChild(img);
-  // root.appendChild(mp4);
 }
  async function fetchAPI() {
     try {
         let url = categoriesURL + KEY;
-        console.log(url);
         const response = await axios.get(categoriesURL+KEY);
         const gifsList = response.data.data;
         console.log(gifsList);

@@ -1,0 +1,42 @@
+.main {
+    margin-top: 10rem;
+}
+
+.gifs {
+  &__container {
+    width: 100%;
+    max-width: $wrapper-max-width;
+    margin: auto;
+    padding: 5rem $padding-16 2rem $padding-16;
+  }
+
+  &__shows {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        @include tablet-et-desk {
+            justify-content: space-between;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        max-width: $max-width-m;
+        padding: 1rem;
+
+        @include tablet-et-desk {
+            max-width: $max-width-t;
+            width: 30%;
+        }
+        @include desktop {
+            max-width: $max-width-d;
+        }
+    }
+}
+#emo {
+     width: 100%;
+    max-width: $wrapper-max-width;
+    margin: auto;
+    padding: 5rem $padding-16 2rem $padding-16;
+}
