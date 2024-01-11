@@ -32,7 +32,7 @@ body {
 }
 
 .header {
-  background-color: #ffdf01;
+  background-color: #ffee76;
   position: fixed;
   top: 0;
   left: 0;
@@ -150,4 +150,8 @@ body {
 }
 .footer__copyright {
   padding: 2rem 0 2rem 0;
+}
+
+.inactiveA, .active {
+  color: #54117f;
 }/*# sourceMappingURL=global.css.map */
