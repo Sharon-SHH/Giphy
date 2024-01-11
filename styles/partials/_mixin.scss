@@ -1,0 +1,59 @@
+@use './variables' as *;
+
+@mixin tablet-et-desk {
+    @media screen and (min-width: $tablet-breakpoint) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: $desktop-breakpoint) {
+        @content;
+    }
+}
+
+/* Text styles */
+@mixin page-header {
+    font-size: $t-24;
+    line-height: $lh-32;
+    font-family: "Avenir", Arial, Helvetica, sans-serif;
+    color: $active-color;
+    
+    @include tablet-et-desk {
+        font-size: $t-60;
+        line-height: $lh-68;
+    }
+}
+
+@mixin section-header {
+    font-size: $t-24;
+    line-height: $lh-32;
+    font-family: "Avenir", Arial, Helvetica, sans-serif;
+
+    @include tablet-et-desk{
+        font-size: $t-36;
+        line-height: $lh-44;
+    }
+}
+
+@mixin sub-header {
+    font-size: $t-14;
+    line-height: $lh-22;
+    font-family: "Avenir", Arial, Helvetica, sans-serif;
+
+    @include tablet-et-desk {
+        font-size: $t-24;
+        line-height: $lh-32;
+    }
+}
+
+@mixin footer-copy{
+    font-size:  $t-13;
+    line-height: $lh-18;
+    font-family: "Avenir", Arial, Helvetica, sans-serif;
+
+    @include tablet-et-desk {
+        font-size: $t-14;
+        line-height: $lh-20; // body and footer have different values
+    }
+}

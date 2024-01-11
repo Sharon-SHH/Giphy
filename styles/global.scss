@@ -1,0 +1,133 @@
+@use './partials/resets' as *;
+@use './partials/mixin' as *;
+@use './partials/variables' as *;
+
+.hidden {  // deal with the header in mobile and tablet modes
+    display: none;
+    @include tablet-et-desk {
+        display: flex;
+    }
+}
+.filter-green{
+    filter: invert(12%) sepia(76%) saturate(6619%) hue-rotate(255deg) brightness(65%) contrast(117%);
+    // filter: invert(0%) sepia(5%) saturate(829%) hue-rotate(347deg) brightness(95%) contrast(85%);
+    // filter: invert(15%) sepia(4%) saturate(13%) hue-rotate(336deg) brightness(101%) contrast(87%);
+    // filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%);
+}
+.header {
+    background-color: $header-color;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    overflow: hidden;
+
+    &__wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-top: 1rem;
+        margin: auto;
+        max-width: $wrapper-max-width;
+    }
+
+    &__img {
+        display: flex;
+        flex-direction: row;    
+        align-items: center;
+        max-width: 90%;
+        justify-content:center;
+        padding-top: $padding-24;
+        
+        @include tablet-et-desk {
+            display: none;
+        }
+    }
+
+    &__tabs {
+        display: flex;
+        flex-direction: row; 
+        justify-content:space-between;
+        list-style-type: none;
+        padding: 0 $padding-16;        
+
+        @include tablet-et-desk {
+            width: 40%;
+        }
+    }
+}
+
+.footer {
+    background-color: $footer-color; //$main-color;
+    color: $footer-backgroundcolor;
+    @include footer-copy;
+    width: 100%;
+    padding-top: 1rem;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding:  0 $padding-16;
+        max-width: $wrapper-max-width;
+        margin: auto;
+        width: 100%;
+
+
+        @include desktop {
+            max-width: $wrapper-max-width;
+            margin: auto;
+            width: 90%;
+        }
+    }
+
+    &__brand { // align first footer line
+        h1 {
+            width: $footer-item-len;
+            
+        }
+        @include tablet-et-desk {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        &--social {
+            display: flex;
+            justify-content: space-between;
+            width: $footer-item-len-m;
+            padding-top: $padding-16;
+            align-self: flex-end;
+
+            @include tablet-et-desk {
+                padding-top: 0;
+                align-self:center;
+                width: $footer-item-len;
+                height: $lh-44;
+            }
+        }
+    }
+
+    &__contacts { // align contacts
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @include tablet-et-desk {
+            flex-direction: row;
+        }
+        &--item1 {
+            width: $footer-item-len;
+        }
+        &--items {
+            @include tablet-et-desk {
+                width: $footer-item-len;
+            }
+        }
+    }
+
+    &__copyright {
+        padding: 2rem 0 2rem 0;
+    }
+}
