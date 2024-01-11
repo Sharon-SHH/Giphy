@@ -23,7 +23,10 @@
     height: 50vh;
 
     @include tablet-et-desk {
-      height: 65vh;
+      height: 60vh;
+    }
+    @include desktop {
+      height: 70vh;
     }
   }
   &__infoWrapper {
