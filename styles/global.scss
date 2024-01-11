@@ -30,7 +30,7 @@ a {
     overflow: hidden;
 
     @include tablet-et-desk {
-        height: 5rem;
+        height: 6rem;
     }
 
     &__wrap {
@@ -57,7 +57,7 @@ a {
     &__tabs {
         display: flex;
         flex-direction: row; 
-        justify-content:space-between;
+        justify-content:space-around;
         align-items: center;
         list-style-type: none;
         padding: 0 $padding-16;        

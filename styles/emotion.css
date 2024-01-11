@@ -1,0 +1,23 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+p,
+body {
+  margin: 0;
+  font-family: "Avenir", Arial, Helvetica, sans-serif;
+}
+
+/* Set Breakpoint width */
+/* Text Size */
+/* Line Height */
+/* Set padding */
+/* Set Color */
+/* Text styles */
+.main__wrapper {
+  padding: 7rem;
+}/*# sourceMappingURL=emotion.css.map */

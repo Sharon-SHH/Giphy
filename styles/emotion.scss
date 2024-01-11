@@ -1,0 +1,10 @@
+@use './partials/resets' as *;
+@use './partials/mixin' as *;
+@use './partials/variables' as *;
+
+
+.main{
+    &__wrapper{
+        padding: 7rem;
+    }
+}

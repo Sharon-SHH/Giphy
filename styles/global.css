@@ -51,7 +51,7 @@ a {
 }
 @media screen and (min-width: 768px) {
   .header {
-    height: 5rem;
+    height: 6rem;
   }
 }
 .header__wrap {
@@ -77,7 +77,7 @@ a {
 .header__tabs {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   list-style-type: none;
   padding: 0 16px;
