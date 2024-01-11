@@ -10,10 +10,10 @@
   background-image: url($url-show);
 }
 .hero {
-  margin-top: 5rem;
+  margin-top: $header-margin-m;
 
   @include tablet-et-desk {
-    margin-top: 3.5rem;
+    margin-top: $header-margin;
   }
 
   &__info {

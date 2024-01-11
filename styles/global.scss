@@ -2,10 +2,11 @@
 @use './partials/mixin' as *;
 @use './partials/variables' as *;
 
-li{
-    padding-top: 2rem;
-}
 
+
+a {
+    text-decoration: none;
+}
 .hidden {  // deal with the header in mobile and tablet modes
     display: none;
     @include tablet-et-desk {
@@ -15,9 +16,9 @@ li{
 }
 .filter-green{
     filter: invert(12%) sepia(76%) saturate(6619%) hue-rotate(255deg) brightness(65%) contrast(117%);
-    // filter: invert(0%) sepia(5%) saturate(829%) hue-rotate(347deg) brightness(95%) contrast(85%);
-    // filter: invert(15%) sepia(4%) saturate(13%) hue-rotate(336deg) brightness(101%) contrast(87%);
-    // filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%);
+}
+.img_size {
+    width: 4rem;
 }
 .header {
     background-color: $header-color;
@@ -28,10 +29,14 @@ li{
     width: 100%;
     overflow: hidden;
 
+    @include tablet-et-desk {
+        height: 5rem;
+    }
+
     &__wrap {
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: center;
         margin-top: 1rem;
         margin: auto;
         max-width: $wrapper-max-width;
@@ -43,7 +48,6 @@ li{
         align-items: center;
         max-width: 90%;
         justify-content:center;
-        // padding-top: ;
         
         @include tablet-et-desk {
             display: none;
@@ -53,7 +57,8 @@ li{
     &__tabs {
         display: flex;
         flex-direction: row; 
-        justify-content:space-around;
+        justify-content:space-between;
+        align-items: center;
         list-style-type: none;
         padding: 0 $padding-16;        
 
@@ -137,10 +142,13 @@ li{
     }
 }
 
-.inactiveA, .active{
+.active{
     color: #54117f;
     font-size: 1rem;
-    font-family: "Avenir", Arial, Helvetica, sans-serif;
     font-weight: 600;
-    // margin-top: 2rem;
+    border-bottom: 1px solid #6a3989;
+    padding-bottom: 0.5rem;
+}
+.inactive {
+    color: grey;
 }
