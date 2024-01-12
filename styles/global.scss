@@ -1,7 +1,7 @@
 @use './partials/resets' as *;
 @use './partials/mixin' as *;
 @use './partials/variables' as *;
-
+@use "./partials/typography" as *;
 
 
 a {
@@ -30,7 +30,7 @@ a {
     overflow: hidden;
 
     @include tablet-et-desk {
-        height: 5rem;
+        height: 6rem;
     }
 
     &__wrap {

@@ -1,13 +1,18 @@
+@use "./partials/mixin" as *;
+@use "./partials/resets" as *;
+@use "./partials/variables" as *;
+@use "./partials/typography" as *;
+
 .main {
     margin-top: 10rem;
 }
 
-.gifs {
+.emos {
   &__container {
     width: 100%;
     max-width: $wrapper-max-width;
     margin: auto;
-    padding: 5rem $padding-16 2rem $padding-16;
+    padding:1rem $padding-16 2rem $padding-16;
   }
 
   &__shows {
@@ -33,10 +38,19 @@
             max-width: $max-width-d;
         }
     }
+
+    &__input {
+        padding-bottom: 1rem;
+    }
+
+    &__error {
+        color: orangered;
+        border: 1px solid orangered;
+        border-radius: 0.5rem;
+        padding: 1rem;
+        margin-bottom: 2rem;
+        display: none;
+    }
 }
-#emo {
-     width: 100%;
-    max-width: $wrapper-max-width;
-    margin: auto;
-    padding: 5rem $padding-16 2rem $padding-16;
-}
+
+ 

@@ -1,7 +1,83 @@
+@import url("http://fonts.googleapis.com/css?family=Kavoon");
+/* Set Breakpoint width */
+/* Text Size */
+/* Line Height */
+/* Set padding */
+/* Set Color */
+/* Text styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+p,
+body {
+  margin: 0;
+  font-family: "Avenir", Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+  font-family: "Avenir";
+  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf"), url("../../assets/fonts/AvenirNextLTPro.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../../assets/fonts/AvenirNextLTProBold.ttf"), url("../../assets/fonts/AvenirNextLTPro-Bold.otf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../../assets/fonts/AvenirNextLTproDemi.ttf"), url("../../assets/fonts/AvenirNextLTPro-Demi.otf");
+  font-weight: 600;
+}
 .main {
   margin-top: 10rem;
 }
 
-.pad {
-  padding: 8rem 16px 2rem 16px;
+.emos__container {
+  width: 100%;
+  max-width: 1140px;
+  margin: auto;
+  padding: 1rem 16px 2rem 16px;
+}
+.emos__shows {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+@media screen and (min-width: 768px) {
+  .emos__shows {
+    justify-content: space-between;
+  }
+}
+.emos__img {
+  width: 100%;
+  max-width: 30rem;
+  padding: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .emos__img {
+    max-width: 40rem;
+    width: 30%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .emos__img {
+    max-width: 60rem;
+  }
+}
+.emos__input {
+  padding-bottom: 1rem;
+}
+.emos__error {
+  color: orangered;
+  border: 1px solid orangered;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  display: none;
 }/*# sourceMappingURL=emotion.css.map */

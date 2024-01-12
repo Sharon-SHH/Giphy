@@ -20,6 +20,7 @@ function addToHTML(gifs) {
     try {
         let url = categoriesURL + KEY;
         const response = await axios.get(categoriesURL+KEY);
+        console.log(response);
         const gifsList = response.data.data;
         console.log(gifsList);
         gifsList.forEach((element) => {
