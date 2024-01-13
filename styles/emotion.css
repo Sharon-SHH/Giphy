@@ -80,4 +80,7 @@ body {
   padding: 1rem;
   margin-bottom: 2rem;
   display: none;
+}
+.emos__error--hasError {
+  display: block;
 }/*# sourceMappingURL=emotion.css.map */

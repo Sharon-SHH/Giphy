@@ -50,6 +50,10 @@
         padding: 1rem;
         margin-bottom: 2rem;
         display: none;
+
+        &--hasError {
+            display: block;
+        }
     }
 }
 

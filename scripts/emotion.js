@@ -7,6 +7,7 @@ const errorList = [];
 
 // Get data from GifAPI
 const KEY = "jbHbQve6OotdhJ4pW4PWhMD8caOsE2Yn";
+const URL = "https://api.giphy.com/v1/gifs/search?api_key=" + KEY + "&q=";
 
 function addToHTML(gifs) {
   try {
@@ -47,32 +48,9 @@ async function fetchAPI(url) {
   }
 }
 
-const inputText = inputEmo.value;
-const URL = "https://api.giphy.com/v1/gifs/search?api_key=" + KEY + "&q=";
-const finalURL =
-  URL +
-  inputText +
-  "&limit=25&offset=0&rating=g&lang=en&bundle=messaging_non_clips";
-inputEmo.onkeypress = function(e){
-  console.log(e.key);
-  if (e.key.toLowerCase() === "enter") {
-    root.innerHTML = "";
-    console.log(finalURL);
-    fetchAPI(finalURL);
-    console.log(errorList);
-
-    if (errorList.length > 0) {
-      errorMeg.innerHTML = errorList[0];
-    }
-    inputEmo.value = "";
-    return false;
-  }
-  
-}
-
 myForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  console.log(e.target.inputEmo);
+  // console.log(e.target.errorMeg);
   const inputSearch = e.target.inputEmo.value;
   let finalURL =
     URL +
@@ -84,8 +62,31 @@ myForm.addEventListener("submit", (e) => {
   console.log(errorList);
 
   if (errorList.length > 0) {
-    errorMeg.innerHTML = errorList[0]; // failed.
+    errorMeg.innerHTML = errorList.join("<br>"); // failed.
   }
+  errorMeg.classList.toggle("emos__error--hasError", errorList.length > 0);
   inputEmo.value = "";
   return false;
-})
+});
+
+
+// inputEmo.onkeypress = function(e){
+//   console.log(e.key);
+//   console.log(inputEmo.value);
+//   const finalURL =
+//     URL +
+//     inputEmo.value +
+//     "&limit=25&offset=0&rating=g&lang=en&bundle=messaging_non_clips";
+//   if (e.key.toLowerCase() === "enter") {
+//     root.innerHTML = "";
+//     console.log(finalURL);
+//     fetchAPI(finalURL);
+//     console.log(errorList);
+
+//     if (errorList.length > 0) {
+//       errorMeg.innerHTML = errorList[0];
+//     }
+//     inputEmo.value = "";
+//     return false;
+//   }
+// }
