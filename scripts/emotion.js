@@ -69,24 +69,24 @@ myForm.addEventListener("submit", (e) => {
   return false;
 });
 
+// Push "enter" key to search
+inputEmo.onkeypress = function(e){
+  console.log(e.key);
+  console.log(inputEmo.value);
+  const finalURL =
+    URL +
+    inputEmo.value +
+    "&limit=25&offset=0&rating=g&lang=en&bundle=messaging_non_clips";
+  if (e.key.toLowerCase() === "enter") {
+    root.innerHTML = "";
+    console.log(finalURL);
+    fetchAPI(finalURL);
+    console.log(errorList);
 
-// inputEmo.onkeypress = function(e){
-//   console.log(e.key);
-//   console.log(inputEmo.value);
-//   const finalURL =
-//     URL +
-//     inputEmo.value +
-//     "&limit=25&offset=0&rating=g&lang=en&bundle=messaging_non_clips";
-//   if (e.key.toLowerCase() === "enter") {
-//     root.innerHTML = "";
-//     console.log(finalURL);
-//     fetchAPI(finalURL);
-//     console.log(errorList);
-
-//     if (errorList.length > 0) {
-//       errorMeg.innerHTML = errorList[0];
-//     }
-//     inputEmo.value = "";
-//     return false;
-//   }
-// }
+    if (errorList.length > 0) {
+      errorMeg.innerHTML = errorList[0];
+    }
+    inputEmo.value = "";
+    return false;
+  }
+}
