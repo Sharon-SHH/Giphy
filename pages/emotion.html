@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="../styles/global.css" />
     <link rel="stylesheet" href="../styles/emotion.css" />
     <title>GifGram</title>
-
 </head>
 <body>
     <header class="header"> 
@@ -35,7 +34,7 @@
                   <div class="emos__error">No data available</div>
                   <label for="inputEmo">Please input the keyword for your GIF: <span class="silver_support">(Support multiple languages)</span></label>
                   <div class="emos__input">
-                    <input type="text" name="inputEmo" id="inputEmo" required>
+                    <input type="text" name="inputEmo" id="inputEmo" onfocus="handleFocus()" onblur="handleBlur()" required>
                     <input type="submit" class="emos__btn"/>
                   </div>
                 </div>
