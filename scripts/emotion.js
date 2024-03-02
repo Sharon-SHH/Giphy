@@ -17,7 +17,7 @@ function addToHTML(gifs) {
     } else {
       errorList.push("No Gifs for this search");
     }
-  } catch(error){
+  } catch (error) {
     console.log(error);
   }
 }
@@ -51,8 +51,7 @@ myForm.addEventListener("submit", (e) => {
   return false;
 });
 
-// Push "enter" key to search
-inputEmo.onkeypress = function(e){
+inputEmo.onkeypress = function (e) {
   const finalURL =
     URL +
     inputEmo.value +
@@ -63,4 +62,4 @@ inputEmo.onkeypress = function(e){
     inputEmo.value = "";
     return false;
   }
-}
+};
