@@ -2,6 +2,7 @@
 @use "./partials/resets" as *;
 @use "./partials/variables" as *;
 @use "./partials/typography" as *;
+@use "../styles/global" as *;
 
 .main {
     margin-top: 10rem;
@@ -41,20 +42,29 @@
 
     &__input {
         padding-bottom: 1rem;
+        display: flex;
+        flex-direction: column;
+        @include tablet-et-desk {
+            flex-direction: row;
+            align-items: center;
+        }
     }
 
     &__error {
-        color: orangered;
-        border: 1px solid orangered;
-        border-radius: 0.5rem;
-        padding: 1rem;
+        color: orangered;       
         margin-bottom: 2rem;
+        font-weight: bolder;
         display: none;
+        width: 15rem;
 
         &--hasError {
             display: block;
         }
     }
+    &__btn {
+        @include global-btn;
+    }
 }
-
- 
+.silver_support{
+    color: $main-color
+}

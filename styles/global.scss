@@ -7,6 +7,18 @@
 a {
     text-decoration: none;
 }
+input[type="text"] {
+  border: 1px solid $main-color;
+  border-radius: $p-5;
+  color: $footer-backgroundcolor;
+  height: 2rem;
+  padding: $p-5;
+  width: 60%;
+  margin: 1rem 0;
+  @include tablet-et-desk {
+    width: 40%;
+  }
+}
 .hidden {  // deal with the header in mobile and tablet modes
     display: none;
     @include tablet-et-desk {

@@ -10,37 +10,36 @@
 </head>
 <body>
     <header class="header"> 
-        <div class="header__wrap">
-            <div class="header__img">
-                <a href="./index.html">
-                    <img class="img_size" src="../assets/images/giphylogo.png" alt="giphy logo">
+      <div class="header__wrap">
+        <div class="header__img">
+          <a href="./index.html">
+              <img class="img_size" src="../assets/images/giphylogo.png" alt="giphy logo">
+          </a>
+        </div>
+        <ul class="header__tabs">
+            <li class="hidden"> 
+                <a href="../index.html">
+                    <img class="logo" src="../assets/images/giphylogo.png" alt="giphy logo">
                 </a>
-            </div>
-            <ul class="header__tabs">
-                <li class="hidden"> 
-                    <a href="../index.html">
-                        <img class="logo" src="../assets/images/giphylogo.png" alt="giphy logo">
-                    </a>
-                </li>
-                <li class="inactive"><a href="../index.html">Category</a></li>
-                <li class="active">Search</li>
-            </ul>
-         </div>
-
+            </li>
+            <li class="inactive"><a href="../index.html">Category</a></li>
+            <li class="active">Search</li>
+        </ul>
+      </div>
     </header>
     <main class="main">
        <form id="myForm">
         <section class="emos">
               <div class="emos__container">
-                
-                <div class="emos__input">
-                  <div class="emos__error"></div>
-                  <label for="inputEmo">Please input the keyword for your GIF:</label>
-                  <input type="text" name="inputEmo" id="inputEmo">
-                  <input type="submit" />
+                <div class="emos">
+                  <div class="emos__error">No data available</div>
+                  <label for="inputEmo">Please input the keyword for your GIF: <span class="silver_support">(Support multiple languages)</span></label>
+                  <div class="emos__input">
+                    <input type="text" name="inputEmo" id="inputEmo" required>
+                    <input type="submit" class="emos__btn"/>
+                  </div>
                 </div>
                 <div class="emos__shows">
-                    
                 </div>
               </div>
         </section>
