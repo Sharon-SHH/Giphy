@@ -46,6 +46,17 @@
         line-height: $lh-32;
     }
 }
+@mixin lab-btn {
+    font-size: $lh-10;
+    line-height: $lh-20;
+    font-family: "Avenir", Arial, Helvetica, sans-serif;
+    font-weight: 700;
+
+    @include tablet-et-desk{
+        font-size: $lh-12;
+        line-height: $t-24;
+    }
+}
 
 @mixin footer-copy{
     font-size:  $t-13;
@@ -55,5 +66,25 @@
     @include tablet-et-desk {
         font-size: $t-14;
         line-height: $lh-20; // body and footer have different values
+    }
+}
+
+@mixin global-btn {
+    background-color: $blue;
+    color: $active-color;
+    width: 100%;
+    height: $lh-44;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    @include lab-btn;
+
+    &:hover {
+        background-color: $darkblue;
+    }
+    @include tablet-et-desk {
+        margin: 0 $lh-33;
+        width: 30%;
+        
     }
 }
