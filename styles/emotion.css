@@ -46,6 +46,7 @@ input[type=text] {
   padding: 5px;
   width: 60%;
   margin: 1rem 0;
+  transition: width 0.3s ease;
 }
 @media screen and (min-width: 768px) {
   input[type=text] {
@@ -246,6 +247,7 @@ input[type=text] {
   }
 }
 .emos__input {
+  max-width: 80%; /* Limit maximum width of input wrapper */
   padding-bottom: 1rem;
   display: flex;
   flex-direction: column;

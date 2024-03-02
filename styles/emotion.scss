@@ -41,6 +41,7 @@
     }
 
     &__input {
+        max-width: 80%; /* Limit maximum width of input wrapper */
         padding-bottom: 1rem;
         display: flex;
         flex-direction: column;
