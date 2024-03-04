@@ -6,7 +6,6 @@ const errorMeg = document.querySelector(".emos__error");
 // Get data from GifAPI
 const KEY = "jbHbQve6OotdhJ4pW4PWhMD8caOsE2Yn";
 const URL = "https://api.giphy.com/v1/gifs/search?api_key=" + KEY + "&q=";
-
 function handleFocus() {
   document.body.style.overflow = "hidden";
 }
@@ -69,6 +68,7 @@ inputEmo.onkeypress = function (e) {
     root.innerHTML = "";
     fetchAPI(finalURL);
     inputEmo.value = "";
+    inputEmo.blur();
     return false;
-  }
+  } 
 };
